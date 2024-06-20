@@ -1,12 +1,12 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react";
 
 export default function Home() {
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8080')
+    fetch("http://127.0.0.1:8080")
       .then((res) => res.text())
       .then((data) => setMessage(data));
   }, []);
