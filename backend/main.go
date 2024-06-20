@@ -11,9 +11,8 @@ func main() {
 	// Echo instance
 	e := echo.New()
 
-	// Middleware
-	e.Use(middleware.Logger())
-	e.Use(middleware.Recover())
+	// CORS
+	e.Use(middleware.CORS())
 
 	// Route => handler
 	e.GET("/", func(c echo.Context) error {
